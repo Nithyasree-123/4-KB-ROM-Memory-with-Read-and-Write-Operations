@@ -1,4 +1,6 @@
 # 4 KB-ROM-MEMORY-WITH-READ-AND-WRITE-OPERATIONS
+
+
 ## AIM:
 
 To design and simulate a 4KB ROM memory with read and write operations using Verilog HDL and verify the functionality through a testbench in the Vivado 2023.1 simulation environment.
@@ -35,8 +37,9 @@ In this design, we will implement a 4KB ROM. Since ROM is typically read-only, w
 4KB = 4096 Bytes = 4096 x 8 bits
 The address width for 4KB memory is 12 bits (2^12 = 4096).
 
+## VERILOG CODE FOR 4KB ROM MEMORY:
 
-// rom_memory.v
+~~~
 module rom_memory (
     input wire clk,
     input wire write_enable,   // Signal to enable write operation
@@ -58,12 +61,14 @@ module rom_memory (
     end
 endmodule
 
+~~~
+  
 
 ## TESTBENCH FOR TESTBENCH FOR 4KB ROM MEMORY:
 
-// rom_memory_tb.v
-`timescale 1ns / 1ps
+~~~
 
+`timescale 1ns / 1ps
 module rom_memory_tb;
 
     // Inputs
@@ -116,8 +121,14 @@ module rom_memory_tb;
         $monitor("Time = %0t | Write Enable = %b | Address = %h | Data In = %h | Data Out = %h", 
                  $time, write_enable, address, data_in, data_out);
     end
-
 endmodule
+
+~~~
+
+## OUTPUT:
+      
+![Screenshot 2024-10-17 143804](https://github.com/user-attachments/assets/1616ad35-d191-4ed8-b257-db8c8d0e79c3)
+
 
 
 ## CONCLUSION:
